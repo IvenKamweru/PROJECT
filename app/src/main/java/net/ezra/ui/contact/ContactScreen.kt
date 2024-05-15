@@ -51,7 +51,7 @@ Column (
     IconButton(onClick = { navController.navigate(ROUTE_HOME){
         popUpTo(ROUTE_CONTACT){inclusive= true}
     } }) {
-        Icon(painter = painterResource(id = R.drawable.back), contentDescription ="null")
+        Icon(painter = painterResource(id = R.drawable.back), contentDescription ="null", modifier = Modifier.size(9.dp))
     }
 
 
@@ -88,7 +88,7 @@ Column (
             .height(500.dp),
             elevation = CardDefaults.cardElevation(10.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color(0xFFEf0e3a3)
+                containerColor = Color(0xFFE48eaf7)
             )
         ){
 

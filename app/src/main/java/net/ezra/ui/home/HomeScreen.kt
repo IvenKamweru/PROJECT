@@ -45,7 +45,7 @@ fun HomeScreen(navController: NavHostController) {
 
 
     Column (modifier = Modifier
-        .background(color = Color(0XFFE78f6cd))
+        .background(color = Color(0XFFEb0f4fa))
 
         .fillMaxSize()
     ) {
@@ -100,37 +100,40 @@ fun HomeScreen(navController: NavHostController) {
 
                        ){
 
-                       Text(text = "Services",fontSize = 15.sp)
+                       Text(text = "Services",
+                           modifier = Modifier.clickable{navController.navigate(ROUTE_SERVICES) {
+                               popUpTo(ROUTE_HOME) { inclusive = true }
+                           }}
+                           )
                    }
 
                    Spacer(modifier = Modifier.width(5.dp))
 
-                   Card(
-                       modifier = Modifier
-                           .width(100.dp)
-                           .height(80.dp)
-                           ,
-                       elevation = CardDefaults.cardElevation(10.dp),
-                       colors = CardDefaults.cardColors(
-                           containerColor = Color.White
-                       )
-
-
-                   )
-                   {
-Column (modifier = Modifier.padding(10.dp)
-    .padding(10.dp),
-    verticalArrangement = Arrangement.Center
-
-
-
-)
-{
-
-}
-                       Image(painter = painterResource(id = R.drawable.xray), contentDescription ="null", modifier = Modifier
-                           .size(50.dp))
-                   }
+//                   Card(
+//                       modifier = Modifier
+//                           .width(100.dp)
+//                           .height(80.dp)
+//                           ,
+//                       elevation = CardDefaults.cardElevation(10.dp),
+//                       colors = CardDefaults.cardColors(
+//                           containerColor = Color.White
+//                       )
+//
+//
+//                   )
+//                   {
+//Column (modifier = Modifier.padding(10.dp)
+//    .padding(10.dp),
+//    verticalArrangement = Arrangement.Center
+//
+//
+//
+//)
+//{
+//
+//}
+//
+//                   }
 
                } }
         }
